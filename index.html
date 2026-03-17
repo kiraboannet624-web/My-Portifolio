@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="[scroll-behavior:smooth]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portifolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-sans">
+    <header class="bg-white dark:bg-gray-900 shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-10">
+        <a href="#home" class="text-2xl font-bold flex items-center">
+            <span class="text-[#F5A623]">Kirabo</span>
+            <span class="text-gray-800 dark:text-white ml-1">Annet</span>
+        </a>
+        <nav class="relative">
+            <ul class="hidden md:flex flex-wrap space-x-6">
+                <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
+                <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
+                <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
+                   <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
+            </ul>
+
+            <button class="md:hidden flex flex-col space-y-1" id="mobile-menu-button">
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+            </button>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div class="hidden absolute top-full right-0 bg-gray-800 p-4 rounded-md shadow-lg mt-2" id="mobile-menu">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
+                    <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
+                    <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
+                       <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
