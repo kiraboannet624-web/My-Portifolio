@@ -21,7 +21,7 @@
                 <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
                 <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
                 <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
-                   <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
+                <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
             </ul>
 
             <button class="md:hidden flex flex-col space-y-1" id="mobile-menu-button">
@@ -36,7 +36,7 @@
                     <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
                     <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
                     <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
-                       <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
+                    <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
                 </ul>
             </div>
         </nav>
@@ -63,7 +63,7 @@
                     <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
                         <a href="#about"
                             class="bg-[#F5A623] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#e69520] transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                                      About Me
+                            About Me
                         </a>
                         <a href="#contact"
                             class="border-2 border-[#F5A623] text-[#F5A623] px-8 py-3 rounded-lg font-medium hover:bg-[#F5A623] hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
@@ -97,7 +97,7 @@
                 <p class="text-lg text-[#F5A623] mt-2">Designer, Developer, Creative Thinker</p>
 
                 <div class="mt-8 flex flex-col md:flex-row items-center gap-6 md:gap-12 lg:gap-12">
-                       <!-- Left Side: Illustration Placeholder and Icons -->
+                    <!-- Left Side: Illustration Placeholder and Icons -->
                     <div class="md:w-1/2 flex flex-col items-center">
                         <figure>
                             <img src="nnn.jpg" alt="Developer at Desk" class="w-3/4 sm:w-full max-w-md animate-pulse">
@@ -112,7 +112,7 @@
                             <span class="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md">React</span>
                         </div>
                     </div>
-                      <!-- Right Side: Text and More About Me Button -->
+                    <!-- Right Side: Text and More About Me Button -->
                     <div class="md:w-1/2 text-left">
                         <article>
                             <p class="text-gray-600 dark:text-gray-300 mt-6 text-lg leading-relaxed">
@@ -130,3 +130,34 @@
                             class="inline-block mt-6 bg-[#F5A623] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#e69520] transition duration-300 ease-in-out transform hover:scale-105 animate-bounce">
                             <span id="buttonText">More About Me</span>
                         </button>
+                        <!-- Add Toggleable Content -->
+                        <div id="moreInfo" class="hidden mt-6 transition-opacity duration-300 opacity-0 text-left">
+                            <h4 class="text-lg font-semibold text-[#F5A623]">Hobbies & Interests</h4>
+                            <ul class="mt-4 text-gray-600 dark:text-gray-400 list-disc list-outside ml-4">
+                                <li>Exploring new UI/UX design trends</li>
+                                <li>Photography and visual storytelling</li>
+                                <li>Learning about accessibility in web development</li>
+                                <li>Traveling and discovering new cultures</li>
+                            </ul>
+                            <h4 class="text-lg font-semibold text-[#F5A623] mt-6">Additional Skills</h4>
+                            <ul class="mt-4 text-gray-600 dark:text-gray-400 list-disc list-outside ml-4">
+                                <li>Prototyping with Figma</li>
+                                <li>Responsive design with Tailwind CSS</li>
+                                <li>Basic JavaScript interactivity</li>
+                                <li>Graphic design with Canva</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                     <!-- Add Random Quote -->
+                <figure class="my-8">
+                    <blockquote>
+                        <p id="quote"
+                            class="text-lg text-gray-700 dark:text-gray-300 italic bg-gray-200 dark:bg-gray-800 px-4 sm:px-6 py-4 rounded-lg max-w-2xl mx-auto text-center relative">
+                            <span class="absolute left-4 top-2 text-2xl text-gray-500 dark:text-gray-400">“</span>
+                            <span class="absolute right-4 bottom-2 text-2xl text-gray-500 dark:text-gray-400">”</span>
+                        </p>
+                    </blockquote>
+                </figure>
+            </div>
+        </section>
