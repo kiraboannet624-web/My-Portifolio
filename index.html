@@ -11,19 +11,21 @@
 </head>
 
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-sans">
+    <!-- Navigation Bar -->
     <header class="bg-white dark:bg-gray-900 shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-10">
         <a href="#home" class="text-2xl font-bold flex items-center">
             <span class="text-[#F5A623]">Kirabo</span>
             <span class="text-gray-800 dark:text-white ml-1">Annet</span>
         </a>
         <nav class="relative">
+            <!-- Desktop menu -->
             <ul class="hidden md:flex flex-wrap space-x-6">
                 <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
                 <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
                 <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
-                <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
             </ul>
 
+            <!-- Mobile hamburger button -->
             <button class="md:hidden flex flex-col space-y-1" id="mobile-menu-button">
                 <span class="block w-6 h-0.5 bg-white"></span>
                 <span class="block w-6 h-0.5 bg-white"></span>
@@ -36,7 +38,6 @@
                     <li><a href="#home" class="hover:text-[#F5A623] transition-colors font-medium">Home</a></li>
                     <li><a href="#about" class="hover:text-[#F5A623] transition-colors font-medium">About</a></li>
                     <li><a href="#contact" class="hover:text-[#F5A623] transition-colors font-medium">Contact</a></li>
-                    <li><a href="#project" class="hover:text-[#F5A623] transition-colors font-medium">project</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,7 +52,7 @@
                 <!-- Home Content -->
                 <article class="md:w-3/5 text-center md:text-left mx-auto max-w-md md:max-w-none">
                     <p class="text-[#F5A623] text-sm font-semibold tracking-wider uppercase">Hello, I'm</p>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-white mt-2">kirabo
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mt-2">kirabo
                         Annet</h1>
                     <h2 class="text-xl md:text-2xl font-semibold text-[#F5A623] mt-2">Web Developer & UI/UX Designer
                     </h2>
@@ -72,6 +73,7 @@
                     </div>
                 </article>
 
+                <!-- Profile Image -->
                 <figure class="md:w-2/5 flex flex-col items-center">
                     <div class="flex justify-center">
                         <div class="relative">
@@ -149,7 +151,8 @@
                         </div>
                     </div>
                 </div>
-                     <!-- Add Random Quote -->
+
+                <!-- Add Random Quote -->
                 <figure class="my-8">
                     <blockquote>
                         <p id="quote"
@@ -161,7 +164,8 @@
                 </figure>
             </div>
         </section>
-         <!-- Contact Section -->
+
+        <!-- Contact Section -->
         <section id="contact"
             class="py-20 flex items-center justify-center p-6 bg-white dark:bg-gray-900 [scroll-margin-top:5rem]">
             <div class="max-w-6xl mx-auto">
@@ -179,7 +183,7 @@
                     <!-- Contact Form -->
                     <div class="md:w-3/5">
                         <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Get In Touch</h3>
-                         <form class="space-y-6">
+                        <form class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name"
@@ -199,7 +203,6 @@
                                 </div>
                             </div>
                             <div>
-                                     <div>
                                 <label for="subject"
                                     class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Subject</label>
                                 <input type="text" id="subject"
@@ -219,7 +222,8 @@
                             </button>
                         </form>
                     </div>
-                        <!-- Contact Information -->
+
+                    <!-- Contact Information -->
                     <div class="md:w-2/5">
                         <div class="bg-gray-50 dark:bg-gray-800 p-4 sm:p-8 rounded-lg shadow-md">
                             <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Contact Information</h3>
@@ -240,7 +244,7 @@
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div>
-                                         <h4 class="font-semibold text-gray-800 dark:text-white">contact</h4>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">contact</h4>
                                         <p class="text-gray-600 dark:text-gray-300">+250784916085</p>
                                     </div>
                                 </div>
@@ -266,3 +270,42 @@
         <p class="text-sm text-gray-400 mt-1">Last updated: <time datetime="2026-01-19">march15, 2026</time></p>
     </footer>
 
+    <script>
+
+        //Add this JavaScript to toggle the mobile menu
+
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        // Random motivational quotes
+        const quotes = [
+            "Your passion is your power—keep creating!",
+            "Every challenge is a chance to grow.",
+            "Design your dreams, code your future.",
+            "Stay curious, keep learning, never stop.",
+            "Small steps today lead to big wins tomorrow."
+        ];
+
+        // Display a random quote
+        const quoteElement = document.getElementById('quote');
+        if (quoteElement) {
+            quoteElement.textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+        }
+
+        // Toggle "More About Me" section
+        const toggleButton = document.getElementById('toggleButton');
+        const buttonText = document.getElementById('buttonText');
+        const moreInfo = document.getElementById('moreInfo');
+
+        if (toggleButton && buttonText && moreInfo) {
+            toggleButton.addEventListener('click', () => {
+                moreInfo.classList.toggle('hidden');
+                moreInfo.classList.toggle('opacity-0');
+                moreInfo.classList.toggle('opacity-100');
+                buttonText.textContent = moreInfo.classList.contains('hidden') ? 'More About Me' : 'Less About Me';
+            });
+        }
+    </script>
+</body>
+
+</html>
